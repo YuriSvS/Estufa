@@ -1,6 +1,6 @@
-Projeto de estufa inteligente intregado com arduino
+<h2>Projeto de estufa inteligente intregado com arduino<h2>
 
-Integrantes:
+Integrantes:<br>
 Pedro Henrique Avila Zelenski <br>
 Pedro Henrique Gonçalves <br>
 Rafael Albino Romano <br>
