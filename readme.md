@@ -7,7 +7,7 @@ Rafael Albino Romano <br>
 Yuri Santos Viana <br>
 
 
--- README --
+Caso deseje incrementar o sistema de notificação por e-mail, será necessário seguir o tutorial a baixo:
 
 Para funcionar o envio de email faça o seguinte procedimento:
 
@@ -39,6 +39,3 @@ auth_password = senha email
 force_sender = cole seu email
 
 hostname=localhost
-#� �s�i�t�e�-�i�n�t�e�g�r�a�-�o�-�c�o�m�a�r�d�u�i�n�o�
-�
-�
