@@ -45,7 +45,7 @@ $con4 = $conexao->query($consulta4) or die($mysqli->error);
     <main>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Estufa Smart</a>
+                <a class="navbar-brand" href="home.php">Estufa Smart</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -56,13 +56,15 @@ $con4 = $conexao->query($consulta4) or die($mysqli->error);
                 <a href="sair.php" class="btn btn-danger me-5">Sair</a>
             </div>
         </nav>
+        
     </main>
 
     <header>
         <div class="container text-center">
             <div class="row">
                 <div class="col align-self-center">
-                    <form method="post" action="teste2.php">
+                <h3>Criar Alerta</h3>
+                    <form method="post" action="notificacao.php">
                         <div class="form-floating mb-3">
                             <input type="calendario" class="form-control-sm" id="temp" name="temp" value=""
                                 placeholder="Digite a temperatura:">

@@ -1,25 +1,28 @@
-<table class="table mt-4">
-                <thead class="thead bg-white">
-                    <tr>
-                        <th>Temperatura sensor</th>
-                        <th>Luminosidade sensor</th>
-                        <th>Co² sensor</th>
+<div class="table-responsive">
 
-                    </tr>
+    <table class="table mt-2">
+        <thead class="thead bg-white">
+            <tr>
+                <th>Temperatura sensor</th>
+                <th>Luminosidade sensor</th>
+                <th>Co² sensor</th>
 
-                </thead>
-                <tbody>
+            </tr>
 
-                    <!-- FORM PARA PEGAR O DADO QUE USUARIO DIGITAR-->
+        </thead>
+        <tbody>
 
-                    <?php
-                    while($dado = $con->fetch_array()) {
-                    echo "<tr>
-                            <td> " . $dado['temp'] . "</td>             
-                            <td > " . $dado['lumi'] . "</td>
-                            <td > " . $dado['co2'] . "</td>
-                    </tr>";
-                    }
-                    ?>
-                </tbody>
-            </table>
+            <!-- FORM PARA PEGAR O DADO QUE USUARIO DIGITAR-->
+
+            <?php
+            while ($dado = $con->fetch_array()) {
+                echo "<tr>
+                                <td> " . $dado['temp'] . "</td>             
+                                <td > " . $dado['lumi'] . "</td>
+                                <td > " . $dado['co2'] . "</td>
+                        </tr>";
+            }
+            ?>
+        </tbody>
+    </table>
+</div>

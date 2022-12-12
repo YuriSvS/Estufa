@@ -8,6 +8,10 @@ body {
     background-size: 150%;
 }
 
+.dados{
+    padding-top: 5%;
+}
+
 /* body.center-form {
     min-height: 100vh;
 }

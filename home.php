@@ -28,6 +28,7 @@ $con = $conexao->query($consulta) or die($mysqli->error);
         window.onload = function() {
 
             var chartTemp = new CanvasJS.Chart("ChartTemperatura", {
+                backgroundColor: "transparent",
                 title: {
                     text: "Temperatura"
                 },
@@ -46,6 +47,7 @@ $con = $conexao->query($consulta) or die($mysqli->error);
             chartTemp.render();
 
             var chartLuz = new CanvasJS.Chart("ChartLuz", {
+                backgroundColor: "transparent",
                 title: {
                     text: "Luminosidade"
                 },
@@ -64,6 +66,7 @@ $con = $conexao->query($consulta) or die($mysqli->error);
             chartLuz.render();
 
             var chartNco = new CanvasJS.Chart("ChartNco", {
+                backgroundColor: "transparent",
                 title: {
                     text: "Nivel Co²"
                 },
@@ -82,67 +85,6 @@ $con = $conexao->query($consulta) or die($mysqli->error);
             chartNco.render();
 
         }
-
-
-        //     window.onload = function() {
-
-        //         var chart = new CanvasJS.Chart("chartContainer", {
-        //             theme: "light2",
-        //             title: {
-        //                 text: "Central de monitoramento"
-        //             },
-        //             subtitles: [{
-        //                 text: "Acompanhe o progresso da sua colheita"
-        //             }],
-        //             legend: {
-        //                 cursor: "pointer",
-        //                 itemclick: toggleDataSeries
-        //             },
-        //             toolTip: {
-        //                 shared: true
-        //             },
-        //             data: [{
-        //                     type: "stackedArea",
-        //                     name: "Luminosidade",
-        //                     showInLegend: true,
-        //                     xValueType: "dateTime",
-        //                     visible: false,
-        //                     yValueFormatString: "#,##0 lm",
-        //                     xValueFormatString: "MMM YYYY",
-        //                     dataPoints: <?php echo json_encode($luz, JSON_NUMERIC_CHECK); ?>
-        //                 },
-        //                 {
-        //                     type: "stackedArea",
-        //                     name: "Temperatura",
-        //                     markerSize: 0,
-        //                     showInLegend: true,
-        //                     yValueFormatString: "#,##0 °C",
-        //                     dataPoints: <?php echo json_encode($Temp, JSON_NUMERIC_CHECK); ?>
-        //                 },
-        //                 {
-        //                     type: "stackedArea",
-        //                     name: "Nivel Co2",
-        //                     showInLegend: true,
-        //                     visible: false,
-        //                     yValueFormatString: "#,##0 ppm",
-        //                     dataPoints: <?php echo json_encode($n_co, JSON_NUMERIC_CHECK); ?>
-        //                 }
-        //             ]
-        //         });
-
-        //         chart.render();
-
-        //         function toggleDataSeries(e) {
-        //             if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-        //                 e.dataSeries.visible = false;
-        //             } else {
-        //                 e.dataSeries.visible = true;
-        //             }
-        //             chart.render();
-        //         }
-
-        //     }
-        // 
     </script>
 
     <title>Estufa Smart</title>
@@ -152,26 +94,29 @@ $con = $conexao->query($consulta) or die($mysqli->error);
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Estufa Smart</a>
-            <a href="teste2.php" class="btn btn-danger me-5">Criar alerta</a>
+            <a class="navbar-brand" href="home.php">Estufa Smart</a>
+            <a href="notificacao.php" class="btn btn-danger me-5">Criar alerta</a>
         </div>
         <div class="d-flex">
             <a href="sair.php" class="btn btn-danger me-5">Sair</a>
         </div>
     </nav>
-    <div class="container">
-    <?php include_once('exibir.php'); ?>
-    </div>
-    <!-- <main>
-    <p>Main</p>
-  </main> -->
-    <header>
 
+    <div class="container">
+
+    </div>
+    <main>
+        <h2>Central de Monitoramento</h2>
+    </main>
+    <!-- MAIN -->
+
+    <header style="padding: 5%;">
         <div class="container text-center">
             <div class="row">
                 <div id="ChartTemperatura" style="height: 180; width: 50%;"></div>
                 <div id="ChartLuz" style="height: 180px; width: 50%;"></div>
                 <div id="ChartNco" style="height: 180px; width: 50%;"></div>
+                <div class="dados"><?php include_once('exibir.php'); ?></div>
             </div>
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         </div>
