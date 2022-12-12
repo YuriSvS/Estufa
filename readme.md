@@ -1,10 +1,10 @@
 Projeto de estufa inteligente intregado com arduino
 
 Integrantes:
-Pedro Henrique Avila Zelenski
-Pedro Henrique Gonçalves
-Rafael Albino Romano
-Yuri Santos Viana
+Pedro Henrique Avila Zelenski <br>
+Pedro Henrique Gonçalves <br>
+Rafael Albino Romano <br>
+Yuri Santos Viana <br>
 
 
 -- README --
