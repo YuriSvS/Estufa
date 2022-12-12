@@ -1,4 +1,4 @@
-<h2>Projeto de estufa inteligente intregado com arduino<h2>
+<h2>Projeto de estufa inteligente intregado com arduino</h2>
 
 Integrantes:<br>
 Pedro Henrique Avila Zelenski <br>
